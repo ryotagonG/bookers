@@ -12,9 +12,9 @@
     <tr>
       <td><%= book.title %></td>
       <td><%= book.body %></td>
-      <td><%= link_to "show", book_path(book.id) %></td>
-      <td><%= link_to "edit", edit_book_path(book.id) %></td>
-      <td><%= link_to "destroy", book_path(book.id), method: :delete, data: {confirm: "Are you sure?"}%></td>
+      <td><%= link_to "Show", book_path(book.id) %></td>
+      <td><%= link_to "Edit", edit_book_path(book.id) %></td>
+      <td><%= link_to "Destroy", book_path(book.id), method: :delete, data: {confirm: "Are you sure?"}%></td>
     </tr>
     <% end %>
   </tbody>
@@ -34,6 +34,6 @@
 <%= f.text_field :title %>
 
 <h4>Body</h4>
-<%= f.text_field :body %>
-<%= f.submit "Create Body" %>
+<%= f.text_field :body %><br>
+<%= f.submit "Create Book" %>
 <% end %>
